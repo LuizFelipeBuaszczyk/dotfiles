@@ -18,17 +18,16 @@ return {
             })
 
             local lsp_servers = {
-                    "lua_ls",
                     "clangd",
                     "dockerls",
-                    "docker_compose_language_service",
                     "html",
+                    "htmx",
                     "ruff",
                     "pyright",
                     "cssls",
-                    "yamlls",
                     "jsonls",
-                    "rust_analyzer"
+                    "rust_analyzer",
+                    "ts_ls",
                 }
             local nvim_cmp = require("cmp_nvim_lsp") 
 

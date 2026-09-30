@@ -11,6 +11,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 -- Estilo do Background
+vim.cmd.colorscheme "catppuccin-nvim"
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 --vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 --vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })

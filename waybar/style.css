@@ -1,1 +1,44 @@
+@import "colors.css";
 
+* {
+    all: unset;
+    font-family: 'Fira Code Nerd Font', monospace; /* Dependency */
+    font-size: 12px;
+}
+
+window#waybar {
+    background: @bg0;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: @fg;
+}
+
+#workspaces {
+    min-width: 75px;
+    font-size: 10px;
+    padding: 2px 4px;
+    margin: 11px 0;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    background-color: @bg1;
+    color: transparent;
+    padding: 0px 10px;
+    border-radius: 99px;
+    margin: 0 2px;
+    min-width: 2px;
+}
+
+#workspaces button.active {
+    background-color: @blue;
+    min-width: 6px;
+    transition: none;
+}
+
+#clock {
+    margin: 0px 15px;
+}
+
+.modules-right {
+    margin-right: 12px;
+}

@@ -5,18 +5,22 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "battery", 
-        "clock"
+        "clock",
+        "battery"
     ],
     "sway/window": {
         "max-length": 50
     },
     "battery": {
+        "interval": 60,
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": {
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        }
     },
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%H:%M}"
     },
     "hyprland/workspaces": {
         "format": "{icon}",

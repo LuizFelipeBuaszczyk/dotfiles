@@ -1,6 +1,13 @@
 {
     "layer": "top",
-    "modules-left": [ ],
+    "reload_on_style_change": true,
+    
+    // Gap between modules
+    "spacing": 10,
+
+    "modules-left": [ 
+        "custom/icon"
+    ],
     "modules-center": [
         "hyprland/workspaces"
     ],
@@ -8,6 +15,11 @@
         "clock",
         "battery"
     ],
+
+
+    "custom/icon": {
+        "format": ""
+    },
     "sway/window": {
         "max-length": 50
     },

@@ -7,9 +7,22 @@
 }
 
 window#waybar {
-    background: @bg0;
+    background: alpha(@bg0, 0.85);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: @fg;
+    padding: 2px 12px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 1rem;
+  border: none;
+}
+
+#custom-icon {
+  font-size: 15px;
+  padding-right: 5px;
 }
 
 #workspaces {
@@ -36,9 +49,12 @@ window#waybar {
 }
 
 #clock {
+    font-size: 15px;
     margin: 0px 15px;
 }
 
-.modules-right {
-    margin-right: 12px;
+#battery {
+    font-size: 15px;
 }
+
+

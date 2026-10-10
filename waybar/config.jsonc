@@ -13,7 +13,9 @@
     ],
     "modules-right": [
         "clock",
-        "battery"
+        "battery",
+        "wireplumber#sink",
+        "wireplumber#source"
     ],
 
 
@@ -34,6 +36,22 @@
     "clock": {
         "format": "{:%H:%M}"
     },
+    "wireplumber#sink": {
+        "format": "{volume}% {icon}",
+        "format-muted": "󰅶",
+        "format-icons": ["", "", ""],
+        "on-click": "helvum",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5
+    },
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": "{volume}% ",
+        "format-muted": "",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "scroll-step": 5
+    },
+
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {

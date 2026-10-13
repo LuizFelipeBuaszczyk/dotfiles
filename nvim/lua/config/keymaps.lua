@@ -1,4 +1,6 @@
-
+-- Splits
+vim.keymap.set('n', '<leader>sv', '<cmd>vsplit<CR>', {desc = 'Split vertical'})
+vim.keymap.set('n', '<leader>sh', '<cmd>split<CR>', {desc = 'Split horizontal'})
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -18,5 +20,4 @@ vim.keymap.set('n', '<leader>tc', function()
 end,
 { desc = 'Neotree close' }
 )
-
 

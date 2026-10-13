@@ -1,4 +1,10 @@
+-- Estilo
+vim.opt.guicursor = ""
+vim.opt.cursorline = true
+
+-- Busca
 vim.opt.hlsearch = false
+vim.opt.ignorecase = true
 
 -- Numeração das linhas
 vim.opt.number = true

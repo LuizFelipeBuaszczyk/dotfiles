@@ -1,23 +1,57 @@
 {
     "layer": "top",
-    "modules-left": [ ],
+    "reload_on_style_change": true,
+    
+    // Gap between modules
+    "spacing": 10,
+
+    "modules-left": [ 
+        "custom/icon"
+    ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "battery", 
-        "clock"
+        "clock",
+        "battery",
+        "wireplumber#sink",
+        "wireplumber#source"
     ],
+
+
+    "custom/icon": {
+        "format": ""
+    },
     "sway/window": {
         "max-length": 50
     },
     "battery": {
+        "interval": 60,
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": {
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        }
     },
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%H:%M}"
     },
+    "wireplumber#sink": {
+        "format": "{volume}% {icon}",
+        "format-muted": "󰅶",
+        "format-icons": ["", "", ""],
+        "on-click": "helvum",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5
+    },
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": "{volume}% ",
+        "format-muted": "",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "scroll-step": 5
+    },
+
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {

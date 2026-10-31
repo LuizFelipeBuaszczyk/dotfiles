@@ -6,6 +6,13 @@ hl.monitor({
     scale    = "auto",
 })
 
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = "auto",
+    mirror   = "eDP-1", 
+})
 
 -- Workspaces
 hl.workspace_rule( { workspace = "1", monitor = "eDP-1", persistent = true } )

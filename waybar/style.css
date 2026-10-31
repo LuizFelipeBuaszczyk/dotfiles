@@ -30,20 +30,17 @@ window#waybar {
     font-size: 10px;
     padding: 2px 4px;
     margin: 11px 0;
-    border-radius: 99px;
 }
 
 #workspaces button {
-    background-color: @bg1;
-    color: transparent;
+    background-color: transparent;
     padding: 0px 10px;
-    border-radius: 99px;
     margin: 0 2px;
     min-width: 2px;
 }
 
 #workspaces button.active {
-    background-color: @blue;
+    border-bottom: 1px solid @white;
     min-width: 6px;
     transition: none;
 }
@@ -57,4 +54,24 @@ window#waybar {
     font-size: 15px;
 }
 
+#pulseaudio-slider slider {
+    min-height: 0;
+    min-width: 0;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
 
+#pulseaudio-slider trough {
+    min-height: 8px;
+    min-width: 75px;
+    border-radius: 5px;
+    background: @bg0;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @fg;
+}

@@ -6,18 +6,17 @@
     "spacing": 10,
 
     "modules-left": [ 
-        "custom/icon"
-    ],
-    "modules-center": [
+        "custom/icon",
         "hyprland/workspaces"
     ],
-    "modules-right": [
-        "clock",
-        "battery",
-        "wireplumber#sink",
-        "wireplumber#source"
+    "modules-center": [
+        "clock"
     ],
-
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "pulseaudio/slider"
+    ],
 
     "custom/icon": {
         "format": ""
@@ -34,32 +33,30 @@
         }
     },
     "clock": {
-        "format": "{:%H:%M}"
+        "format": "{:%H:%M}",
+        "on-click": "exec firefox --new-tab 'https://calendar.google.com'"
     },
-    "wireplumber#sink": {
+    "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": "󰅶",
         "format-icons": ["", "", ""],
-        "on-click": "helvum",
-        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "scroll-step": 5
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
     },
-    "wireplumber#source": {
-        "node-type": "Audio/Source",
-        "format": "{volume}% ",
-        "format-muted": "",
-        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-        "scroll-step": 5
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
     },
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": ""
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
         }
     }
 }

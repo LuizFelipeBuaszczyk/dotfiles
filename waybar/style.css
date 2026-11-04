@@ -18,16 +18,15 @@ window#waybar {
 .modules-right {
   padding: 0 1rem;
   border: none;
+  font-size: 15px;
 }
 
 #custom-icon {
-  font-size: 15px;
   padding-right: 5px;
 }
 
 #workspaces {
     min-width: 75px;
-    font-size: 10px;
     padding: 2px 4px;
     margin: 11px 0;
 }
@@ -46,12 +45,7 @@ window#waybar {
 }
 
 #clock {
-    font-size: 15px;
     margin: 0px 15px;
-}
-
-#battery {
-    font-size: 15px;
 }
 
 #pulseaudio-slider slider {
@@ -74,4 +68,8 @@ window#waybar {
     min-width: 10px;
     border-radius: 5px;
     background: @fg;
+}
+
+#network {
+    margin: 0 10px;
 }

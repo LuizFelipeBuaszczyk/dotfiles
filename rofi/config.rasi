@@ -1,6 +1,6 @@
 configuration {
     show-icons: true;
-    font: "Fire Code Nerd Font";
+    font: "FiraCode Nerd Font";
     modi: "window,run,drun";
     display-drun:               "";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
